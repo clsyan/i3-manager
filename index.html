@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+
+	<!-- <script src="https://unpkg.com/htmx.org@2.0.0"></script> -->
+
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+
+		.panel {
+			display: grid;
+		}
+	</style>
+
+	<script defer src="./script.js"></script>
+</head>
+<body>
+	<it-bar>
+		<workspace-list>
+			<workspace-button focused>1</workspace-button>
+			<workspace-button inactive>2</workspace-button>
+			<workspace-button active>3</workspace-button>
+		</workspace-list>
+		<it-blocks-list>
+			<!-- <it-block></it-block> -->
+			<!-- <it-block> -->
+			<!-- 	VOL40% -->
+			<!-- </it-block> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	MEM2.3G/15.5G (15%) -->
+			<!-- </div> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	SWAP0.0G/8.0G (0%) -->
+			<!-- </div> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	HOME 201G -->
+			<!-- </div> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	IN 90K OUT 2K -->
+			<!-- </div> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	2024-07-09 22:41:37 -->
+			<!-- </div> -->
+			<!-- <it-block-separator>|</it-block-separator> -->
+			<!-- <div class="it-block"> -->
+			<!-- 	us -->
+			<!-- </div> -->
+		</it-blocks-list>
+	</it-bar>
+	<div class="panel">
+		<h3>Blocks</h3>
+		<div>
+			<button onclick="handleAddBlock()">add block</button>
+			<div style="display: flex; align-items: center; gap: 10px">
+
+				<it-blocks-list-config></it-block-list-config>
+			</div>
+		</div>
+		<h3>Bar</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+			<label>background</label>
+			<input onchange="handleChangeBarColorProperty('background', this.value)" type="color" />
+
+			<label>status line</label>
+			<input onchange="handleChangeBarColorProperty('status line', this.value)" type="color" />
+
+			<label>separator</label>
+			<input onchange="handleChangeBarColorProperty('separator', this.value)" type="color" />
+		</div>
+
+		<h3>Focused workspace</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+			<label>background</label>
+			<input onchange="handleChangeWorkspaceButtonColorProperty('focused workspace background', this.value)" type="color" />
+
+			<label>font</label>
+			<input onchange="handleChangeWorkspaceButtonColorProperty('focused workspace font', this.value)" type="color" />
+
+			<label>border</label>
+			<input onchange="handleChangeWorkspaceButtonColorProperty('focused workspace border', this.value)" type="color" />
+		</div>
+
+		<h3>Active workspace</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+	        <label>background</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('active workspace background', this.value)" type="color" />
+
+			<label>font</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('active workspace font', this.value)" type="color" />
+
+			<label>border</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('active workspace border', this.value)" type="color" />
+		</div>
+
+
+		<h3>Inactive workspace</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+	        <label>background</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('inactive workspace background', this.value)" type="color" />
+
+	        <label>font</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('inactive workspace font', this.value)" type="color" />
+
+	        <label>border</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('inactive workspace border', this.value)" type="color" />
+		</div>
+
+
+		<h3>Urgent workspace</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+	        <label>background</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('urgent workspace background', this.value)" type="color" />
+
+	        <label>font</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('urgent workspace font', this.value)" type="color" />
+
+	        <label>border</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('urgent workspace border', this.value)" type="color" />
+		</div>
+
+		<h3>Binding workspace</h3>
+		<div style="display: flex; align-items: center; gap: 10px">
+	        <label>background</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('binding workspace background', this.value)" type="color" />
+
+	        <label>font</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('binding workspace font', this.value)" type="color" />
+
+	        <label>border</label>
+	        <input onchange="handleChangeWorkspaceButtonColorProperty('binding workspace border', this.value)" type="color" />
+		</div>
+	</div>
+</body>
+
+</html>
+	
